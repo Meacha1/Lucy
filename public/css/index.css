@@ -9,12 +9,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .logo {
-    width: 15%;
-    max-width: 150px;
+    width: 12%;
+    max-width: 120px;
     margin: 0 auto;
 }
 
@@ -42,6 +42,7 @@ body {
     overflow-y: auto;
     padding: 10px;
     box-sizing: border-box;
+    background-color: #04172b;
 }
 
 .message {
@@ -99,6 +100,16 @@ body {
     flex-shrink: 0;
 }
 
+#myForm {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 @media only screen and (max-width: 600px) {
     .logo {
         width: 40%;
@@ -106,15 +117,15 @@ body {
     }
 
     .user-message, .ai-message {
-        max-width: 100%; /* Adjusted for better text wrapping on smaller screens */
+        max-width: 100%;
     }
 
     .input-container {
-        flex-direction: row; /* Adjusted for better layout on smaller screens */
+        flex-direction: row;
     }
 
-    .input-field {
+    #myForm {
         flex-grow: 1;
-        margin-bottom: 0; /* Adjusted for better spacing */
+        margin-bottom: 0;
     }
 }

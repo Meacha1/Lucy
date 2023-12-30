@@ -1,78 +1,62 @@
-const openai = require('./config').openai;
-const fs = require('fs');
+const openai = require('../config').openai;
 
-const asstID = "asst_6hPzFlVooppqDv534M4vMjMa";
-const threadID = "thread_vLzM8eP0s2ULH4BvcbQuR9kw";
+const asstID = "asst_uBJ2ny48mZGUySzhfZt3oMW8";
+const threadID = "thread_ykLYyXjFnuyP1MJ63Ze0W76Y";
 
-// async function createFile() {
-// const file = await openai.files.create({
-//   file: fs.createReadStream("personal-info.txt"),
-//   purpose: "assistants",
-// });
-// console.log(file);
-// }
-// createFile()   
-// id = file-5pLubyMdEvYkEamolVgnzPYa
+async function main(input) { 
+  // Create a message
+  await createMessage(input);
+  
+  // Create a run
+  const run = await runThread();
+  
+  // Retrieve the current run
+  let currentRun = await retrieveRun(threadID, run.id);
+  
+  // Keep Run status up to date
+  // Poll for updates and check if run status is completed    
+  while (currentRun.status !== 'completed') {
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    currentRun = await retrieveRun(threadID, run.id);
+  } 
 
-// Create Movie Expert Assistant
-async function createAssistant() {
-  const myAssistant = await openai.beta.assistants.create({
-    instructions: "You are my flirtatious presonal assistant. When asked a question, use the information in the provided file to form a friendly and flirtatious response. If you cannot find the answer in the file, do your best to infer what the answer should be.",
-    name: "Lucy",
-    tools: [{ type: "retrieval" }],
-    model: "gpt-3.5-turbo-1106",
-    file_ids: ["file-5pLubyMdEvYkEamolVgnzPYa"]
-  });
+  // Get messages from the thread
+  const { data } = await listMessages();
 
-  console.log(myAssistant);
+  // Display the last message for the current run
+  return data[0].content[0].text.value;
 }
-// createAssistant()
 
-// ass_id = asst_6hPzFlVooppqDv534M4vMjMa
+/* -- Assistants API Functions -- */
 
-// Create a thread
-
-// async function createThread() {
-// const thread = await openai.beta.threads.create();
-// console.log(thread)
-// }
-// createThread()
-
-// thread_id = thread_vLzM8eP0s2ULH4BvcbQuR9kw
-
-// Create a message for the thread
-async function createMessage() {
+// Create a message
+async function createMessage(question) {
   const threadMessages = await openai.beta.threads.messages.create(
     threadID,
-    { role: "user", content: "When did i have a docter appointment?" }
+    { role: "user", content: question }
   );
-  console.log(threadMessages);
 }
 
-// List thread messages
-async function listMessages() {
-  const threadMessages = await openai.beta.threads.messages.list(threadID);
-
-  console.log(threadMessages.data[0].content[0].text.value);
-}
-listMessages()
-
-// Run the assistant's thread
+// Run the thread / assistant
 async function runThread() {
   const run = await openai.beta.threads.runs.create(
-    threadID,
-    { assistant_id: asstID }
+    threadID, 
+    { 
+      assistant_id: asstID,
+      instructions: `Please do not provide annotations in your reply. Only reply based on information in the provided file or based on our chat history. If questions are not related to the file provided, respond with "Sorry, I don't know." Keep your answers short.` 
+    }
   );
-  console.log(run);
+  return run;
 }
-// runThread()
 
-// to get the status of the run
-async function getRunStatus() {
-const currentRun = await openai.beta.threads.runs.retrieve(
-  threadID,
-  "run_93rRSRYfcqEihkvqdXLOvRLZ"
-);
-console.log("Run status: " + currentRun.status);
+// List thread Messages
+async function listMessages() {
+  return await openai.beta.threads.messages.list(threadID);
 }
-// getRunStatus()
+
+// Get the current run
+async function retrieveRun(thread, run) {
+  return await openai.beta.threads.runs.retrieve(thread, run);
+}
+
+module.exports = { main };

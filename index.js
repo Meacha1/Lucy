@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const openai = require('./config').openai;
-const main = require('./util').main;
+const main = require('./utils/util').main;
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded to req.body object
 
 // Initialize an array to store chat entries
 const chatEntries = [];

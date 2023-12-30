@@ -1,70 +1,161 @@
 Personal Data
 
-My name is Rafid Hoda and I like to be called "Rafid". I was born on January 23rd 1991 in Surat, Gujarat, India. In 1996 I moved to Trondheim, Norway with my family. Since 2016, I have been living in Oslo, Norway. I work as a coding teacher at Scrimba. I've been in love with the computer ever since I started using it at the age of 5. I love building projects.
+My name is Meacha Teshome Tafa and I like to be called "Meacha". I was born on July 17th 1989 in Bahir Dar, Ethiopia. I'm a Backend Developer with an engineering background, focusing on creating seamless web applications. I bring a fresh perspective to the world of web development with my experience in structural design. My expertise includes Server-Side Development, Database Design, and API Development. I'm passionate about crafting user-friendly web and mobile experiences and committed to making ideas a reality.
 
-I have a doctor's appointment on the 17th of November at 13:45.
+With skills in Node.js, Nest.js, Express.js, and Django I excel in designing efficient APIs and databases. I collaborate closely with frontend teams to enhance user experiences. I'm dedicated to delivering top-notch solutions, combining clean code with creative problem-solving. Let's work together to elevate your projects.
 
-I have therapy every week on Fridays from 12:00 - 13:00.
+EDUCATION:
+1. Holberton School
+    Full Stack Software Engineering | Back-end
+    August 2022 – October 2023
+    Bahir Dar University, Ethiopia
+2. MSc in Construction Technology and Management
+    December 2015 – March 01, 2018
+    GPA 3.5
+    Bahir Dar University, Ethiopia
+3. BSc in Civil Engineering
+    September 26, 2007 – June 22, 2012
+    GPA 3.42
 
-I attend the Scrimba Townhall every week on Tuesdays 18:00 - 18:45.
+CERTIFICATION:
+    The AI Engineering Professional Certificate
+    Scrimba Interactive Course
+    Duration: One month
+    Completion Date: 12/11/2023
 
-Every Monday we have a Scrimba teacher sync meeting from 17:00 to 17:45. All teachers are required to attend. We share what we did last week and make a plan for the upcoming week.
+WORK EXPERIENCE:
 
-My day always becomes better whenever I go on a walk outside. I would like to go on a walk every single day.
+1. Tatkin Consult plc
+    Structural Engineer | Manager
+    October 2014 – August 2022
+    Roles: Manager, Structural Engineer, Project Manager, Supervisor, Contract Administrator
+    Co-founder of the company
+2. Perago Information Systems
+    Backend Developer
+    August 2022 – Present
+    Technologies: Node.js, Nest.js, Express.js
+    Responsibilities: Backend development, database design, security implementation, system troubleshooting, seamless integration with front-end components
 
-Christmas is coming up and I need to get gifts for friends and family.
+SKILLS:
+a. Backend Development:
+    Node.js, Nest.js, Express.js and Django
 
-Please remind me to do some coding every single day. Even if it is just for 15 minutes.
+b. Full Stack Software Engineering
+    Database Design, Security Implementation, System Troubleshooting and Integration with Front-end Components
 
-I am currently trying to improve what and how I eat. Ideally, I'd like to eat two full meals a day. First meal at around 13:00 and the second one at around 19:00.
+c. web scraping
+    puppteer, beautifulsoup, scrapy
 
-I am a huge fan of movies. Here are my top 20 movies (ranked in order):
-1. The Shawshank Redemption (1994)
-2. 3 Idiots (2009)
-3. The Imitation Game (2014)
-4. Taare Zameen Par (2007)
-5. School of Rock (2003)
-6. Lagaan (2001)
-7. Back to the Future (1985)
-8. The Wolf of Wall Street (2013)
-9. Rocky (1976)
-10. 12 Angry Men (1957)
-11. The Big Short (2015)
-12. Toy Story (1995)
-13. Jurassic Park (2020)
-14. A Bug's Life (1998)
-15. Tarzan (1999)
-16. Jo Jeeta Wohi Sikandar (1992)
-17. Before Sunrise (1995)
-18. Forrest Gump (1994)
-19. Pirates of Silicon Valley (1999)
-20. Super Size Me (2004)
+PORTFOLIO PROJECTS:
 
-There are some people that have greatly inspired and influenced me throughout my life. I've learned a great deal from these people. Here are a few of them:
-- Richard Feynman
-- Aamir Khan
-- Shah Rukh Khan
-- Paul Graham
-- Naval Ravikant
-- George Orwell
-- David Heinemeier Hansson
-- Anand Kumar
-- Jonathan Blow
-- Dan Ariely
-- Tiago Forte
-- Ali Abdaal
-- Rajkumar Hirani
-- Jack Black
-- Derren Brown
-- Patrick Bet-David
-- Andrew Huberman
-- Robert Greene
-- Steve Jobs
+1. Addis CAD Marketplace
 
-I love delicious food. My favorite food is:
-- Indian food
-- Georgian food
-- Italian food
-- Sushi
-- Kebab
-- Thai
+Description:
+CAD-focused e-commerce platform connecting sellers and buyers in Computer-Aided Design.
+a. Key Features:
+    User Authentication and Profiles
+    File Upload and Management
+    Search and Filters
+    Product Listings
+    Rating and Reviews
+    Subscription Tiers
+    User Dashboard
+    Security and Trust
+    Responsive Design
+    Admin Panel
+b. Technologies Used:
+    Frontend: React, Redux
+    Backend: Django, MySQL
+c. Authentication: Djoser
+    Payment Integration: Custom mobile money
+d. Challenges:
+    Custom mobile money payment processing
+    Responsive design for consistent user experience
+e. Learning Outcomes:
+    Proficiency in full-stack web development
+    Experience in e-commerce and secure payment processing
+    Versatility with various technologies
+f. Future Improvements:
+    Shopping Cart and Checkout enhancement
+    Real-time Messaging System
+    SEO and Marketing optimization
+    Expanded payment options
+    Advanced search functionality
+    Continuous improvement in authentication and security
+g. Conclusion:
+    Full-stack web development expertise for the CAD community.
+    Project Link
+prject link: https://addis-cad-marketplace.vercel.app/
+
+2. Addis Cost Estimation Web Application
+
+a. Overview:
+    Dynamic web app for construction professionals, featuring real-time market data and project management tools.
+b. Key Features:
+    Real-time Market Data
+    Database Management
+    User Registration and Authentication
+    Subscription Tiers
+    Bill of Quantities (BOQ) Generator
+    Customized Project Information Form
+    Payment Integration
+    Frontend and Backend Development
+b. Technologies Used:
+    Frontend: Pug, HTML, CSS, JavaScript
+    Backend: Node.js, Express.js
+    Database: MySQL, Sequelize ORM
+    APIs: Customized API for real-time market data, Payment API integration
+    Version Control: Git, GitHub
+c. Outcome:
+    Skills showcased in full-stack development, database management, API integration, and user experience design.
+    Practical solution for construction professionals.
+Project Link: https://github.com/Meacha1/portfolio-project
+
+3. AI Assistant: Lucy
+
+Meet Lucy, my text-savvy AI Assistant powered by the OpenAI Assistant API. Lucy's unique capability lies in processing information from text files, offering intelligent responses based on the provided knowledge source. Key features include adept text-centric processing, context-aware responses, and adaptive learning.
+
+a. Key Features:
+    Text-Centric Processing from Files
+    Context-Aware Responses
+    Adaptive Learning
+b. Use Cases:
+    Research Assistance
+    Language Translation
+    Quick Facts Retrieval
+    Problem Solving
+Lucy, utilizing text files as a knowledge source, showcases my expertise in tailoring AI solutions for specific needs. Inclusion in my portfolio highlights the focused application of AI technology in information retrieval from textual data.
+
+My Contact Information
+    PHONE:
+    +251-909068750
+    WEBSITE:
+    https://meacha1.github.io/My_portfolio_webpage/
+    EMAIL:
+    meachattd@gmail.com
+    LINKEDIN:
+    https://www.linkedin.com/in/meacha-teshome/
+
+HOBBIES
+    Playing with my kids
+    Listening to music
+    Working out in gym
+    Solving code challenges
+    Swimming
+
+family
+    I am married and have two kids. My wife's name is Yemi and my kids are named Lali and Gabi.
+    I have One brothers and three sisters. My brothers' names are Solomon. My sisters' names are Gt, Hanna, and Hiwa.
+    My father's name is Teshome and my mother's name is Fikre.
+    My family lives in Bahir Dar, Ethiopia.
+friend 
+    My best friend's name is Biruk. We have been friends since college.
+    My best friend lives in Addis Ababa, Ethiopia.
+    My best friend's phone number is +251-911-340-538.
+
+favorite
+    My favorite color is black.
+    My favorite movie is Game of throne.
+    My favorite song music gener is pop.
+
+My favorite food is Kitfo and my favorite drink is tea.

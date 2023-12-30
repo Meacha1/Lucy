@@ -15,11 +15,11 @@
         <% chatEntries.forEach(entry => { %>
           <div class="<%= entry.type %>-message-container">
             <% if (entry.type === 'ai') { %>
-              <div class="message <%= entry.type %>-message"><%= entry.message %></div>
               <img src="./images/<%= entry.type %>.png" class="<%= entry.type %>-icon" alt="<%= entry.type %> Icon">
+              <div class="message <%= entry.type %>-message"><%= entry.message %></div>
             <% } else { %>
-              <img src="./images/<%= entry.type %>.png" class="<%= entry.type %>-icon" alt="<%= entry.type %> Icon">
               <div class="message <%= entry.type %>-message"><%= entry.message %></div>
+              <img src="./images/<%= entry.type %>.png" class="<%= entry.type %>-icon" alt="<%= entry.type %> Icon">
             <% } %>
           </div>
         <% }); %>

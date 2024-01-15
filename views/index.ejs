@@ -12,22 +12,28 @@
         <h1>Lucy</h1>
     </div>
     <div class="chat-container">
-        <% chatEntries.forEach(entry => { %>
-          <div class="<%= entry.type %>-message-container">
-            <% if (entry.type === 'ai') { %>
-              <img src="./images/<%= entry.type %>.png" class="<%= entry.type %>-icon" alt="<%= entry.type %> Icon">
-              <div class="message <%= entry.type %>-message"><%= entry.message %></div>
+        <% for (const entry of chatEntries) { %>
+            <% if (entry.type === 'user') { %>
+                <div class="<%= entry.type %>-message-container">
+                    <div class="message <%= `${entry.type}-message` %>">
+                        <%= entry.message %>
+                    </div>
+                    <img src="<%= `./images/${entry.type}.png` %>" class="<%= `${entry.type}-icon` %>" alt="<%= entry.type %> icon">
+                </div>
             <% } else { %>
-              <div class="message <%= entry.type %>-message"><%= entry.message %></div>
-              <img src="./images/<%= entry.type %>.png" class="<%= entry.type %>-icon" alt="<%= entry.type %> Icon">
+                <div class="<%= entry.type %>-message-container">
+                    <img src="<%= `./images/${entry.type}.png` %>" class="<%= `${entry.type}-icon` %>" alt="<%= entry.type %> icon">
+                    <div class="message <%= `${entry.type}-message` %>">
+                        <%= entry.message %>
+                    </div>
+                </div>
             <% } %>
-          </div>
-        <% }); %>
-      </div>
+        <% } %>
+    </div>
     <form id="myForm" action="/" method="post">
-        <input id="textInput" type="text" class="input-field" name="inputField" placeholder="What’s happening?">
+        <input id="textInput" type="text" class="input-field" name="content" placeholder="What’s happening?">
         <button class="ask-button" type="submit">Ask</button>
     </form>
-    <script src="/scripts/main.js"></script>
+    <script src="/js/render.js"></script>
 </body>
 </html>

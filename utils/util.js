@@ -3,7 +3,10 @@ const openai = require('../config').openai;
 const asstID = "asst_uBJ2ny48mZGUySzhfZt3oMW8";
 const threadID = "thread_ykLYyXjFnuyP1MJ63Ze0W76Y";
 
-async function main(input) { 
+async function main(input) {
+  if (!input) {
+    throw new Error('User input is required');
+  }
   // Create a message
   await createMessage(input);
   
